@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+	font-family: icon;
+	src: url("./fonts/icon/icon.woff2");
+	font-weight: 100 900;
+}
+
+@font-face {
+	font-family: Exo;
+	src: url("./fonts/Exo/Exo-VariableFont_wght.ttf");
+	font-weight: 100 900;
+}
+
+@font-face {
+	font-family: Exo;
+	src: url("./fonts/Exo/Exo-Italic-VariableFont_wght.ttf");
+	font-weight: 100 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: JetBrainsMono;
+	src: url("./fonts/JetBrainsMono/JetBrainsMono.ttf");
+	font-weight: 100 800;
+}
+
+@font-face {
+	font-family: JetBrainsMono;
+	src: url("./fonts/JetBrainsMono/JetBrainsMono-Italic.ttf");
+	font-weight: 100 800;
+	font-style: italic;
+}
+
+@theme {
+	--font-sans: Exo, var(--font-serif);
+	--font-mono: JetBrainsMono, ui-monospace, SFMono-Regular, Menlo, Monaco,
+		Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-shadow {
+	text-shadow: 1px 1px 2px black;
+}
+
+i,
+[data-icon] {
+	font-family: icon, monospace;
+	font-style: normal;
+	display: inline-block;
+	text-align: center;
+}
+
+input:focus {
+	outline-style: dashed;
+	outline-width: 1.5px;
+}
+
+@keyframes vibrate {
+	0% {
+		transform: translateX(0);
+	}
+	25% {
+		transform: translateX(-2px);
+	}
+	50% {
+		transform: translateX(2px);
+	}
+	75% {
+		transform: translateX(-2px);
+	}
+	100% {
+		transform: translateX(2px);
+	}
+}
+
+.animate-vibrate {
+	animation: vibrate 0.2s infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.animate-spin {
+	animation: spin 1s linear infinite;
+}

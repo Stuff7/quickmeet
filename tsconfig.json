@@ -1,0 +1,28 @@
+
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "checkJs": true,
+    "rootDir": ".",
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnusedLabels": true,
+    "jsx": "react-jsx",
+    "sourceMap": true,
+    "noImplicitThis": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./client/*"],
+    }
+  },
+  "include": ["client/**/*", "*.d.ts"],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "**/node_modules/*"
+  ]
+}
